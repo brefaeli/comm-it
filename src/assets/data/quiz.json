@@ -1,0 +1,48 @@
+{
+	"questions": [
+		 
+		{
+			"question_id":1,
+			"question":"What is the capital of Israel",
+			"answers":[
+				"Cahiro",
+				"Aman",
+				"Jerusalem"
+			],
+			"correct": 2 
+		},
+				{
+			"question_id":2,
+			"question":"What is the capital of Egypt",
+			"answers":[
+				"Cahiro",
+				"Jerusalem",
+				"Beirut"
+				
+			],
+			"correct": 0		
+		},
+		{
+			"question_id":3,
+			"question":"What is the capital of Greece",
+			"answers":[
+				"Madrid",
+				"Athens",
+				"Paris"
+			],
+			"correct": 1
+		},
+		{
+			"question_id":1,
+			"question":"What is the capital of France",
+			"answers":[
+				"Madrid",
+				"London",
+				"Paris"
+			],
+			"correct": 2
+		
+		}
+	]
+
+}

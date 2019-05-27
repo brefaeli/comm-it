@@ -1,0 +1,22 @@
+<form *ngIf="questions" (ngSubmit)="onSubmit()" class="card blue-grey" >
+  <h3>{{questions[questionNumber].question}}</h3>
+  <div class="answers">
+    <ul>
+      <li *ngFor="let answer of questions[questionNumber].answers; index as i">
+         
+          <input type="radio" (click)="answerClick($event, questions[questionNumber])" 
+          [checked]="questions[questionNumber].result==i"  name="questionRadio" value = {{i}}>  {{answer}}
+      </li>
+    </ul>
+  </div>
+  <div class="btn-bar">
+    <button [style.visibility]=" questionNumber == 0 ? 'hidden' : 'visible'"
+     type="button" (click)="previous()" class="btn btn-primary">Pre</button>
+     <button type="submit" [style.visibility]=" questionNumber == questions.length -1 && questions[questionNumber].result ? 'visible' : 'hidden'"
+     class="btn btn-success">Submit</button>
+    <button type="button" [disabled]="!questions[questionNumber].result"
+    [style.visibility]=" questionNumber == questions.length -1 ? 'hidden' : 'visible'"
+    (click)="next()" class="btn btn-primary">Next</button>
+   
+  </div>
+</form>

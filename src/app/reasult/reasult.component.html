@@ -1,0 +1,5 @@
+  <div *ngIf="result !== undefined" class="card blue-grey" >
+    <h2 *ngIf="result > 0 ; else oops" >Congratulations</h2>
+    <ng-template #oops><h2>ooops</h2></ng-template>
+    <h3>Your score is {{result.toFixed()}} %</h3>
+  </div>
